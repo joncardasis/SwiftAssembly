@@ -1,0 +1,18 @@
+
+### Linking Against Intel Object File
+1. Create bridging file
+
+
+### Debugging Assembly Code
+Like normal code, assembly can be stepped through in Xcode using the *Step In* button. Using the LLDB debugger we can inspect registers and gather other useful information. A full list of the [LLDB Command Map](http://lldb.llvm.org/lldb-gdb.html) can be found on the offical website.
+
+
+
+------
+Setting preprocessor macros
+Must define in preprocessor macros as well as "Other Swift Flags" in order to expose them to swift.
+
+
+In .swift files arch() can be used:
+I can use arch() with : x86_64, arm, arm64, or i386
+  ex. #if arch(arm) || arch(arm64)

@@ -12,7 +12,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let obj = ObjC_Class()
+        print(obj.add(5, b: 10))
+        
+        #if DEBUG
+            print("debugging")
+        #endif
+        
+        #if INTEL
+            print("x86 FLAG ON")
+        #endif
+        
+        #if ARCH_ARM64
+            print("ARM FLAG ON")
+        #endif
+        
     }
 
     override func didReceiveMemoryWarning() {
