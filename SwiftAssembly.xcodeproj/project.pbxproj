@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		35EB7A2E1E01E50A00888C09 /* AdditionAssembly_ARM.asm in Sources */ = {isa = PBXBuildFile; fileRef = 35EE56C61E01DF7800DA3575 /* AdditionAssembly_ARM.asm */; };
+		35EB7A301E032D2900888C09 /* AssemblyBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 35EB7A2F1E032D2900888C09 /* AssemblyBridge.c */; };
 		35EE56B11E01DF4000DA3575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE56B01E01DF4000DA3575 /* AppDelegate.swift */; };
 		35EE56B31E01DF4000DA3575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE56B21E01DF4000DA3575 /* ViewController.swift */; };
 		35EE56B61E01DF4000DA3575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE56B41E01DF4000DA3575 /* Main.storyboard */; };
 		35EE56B81E01DF4000DA3575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE56B71E01DF4000DA3575 /* Assets.xcassets */; };
 		35EE56BB1E01DF4000DA3575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE56B91E01DF4000DA3575 /* LaunchScreen.storyboard */; };
 		35EE56CA1E01DF7800DA3575 /* AdditionAssembly_x86.asm in Sources */ = {isa = PBXBuildFile; fileRef = 35EE56C71E01DF7800DA3575 /* AdditionAssembly_x86.asm */; };
-		35EE56CB1E01DF7800DA3575 /* ObjC_Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE56C81E01DF7800DA3575 /* ObjC_Class.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35EB7A2F1E032D2900888C09 /* AssemblyBridge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AssemblyBridge.c; sourceTree = "<group>"; };
 		35EE56AD1E01DF4000DA3575 /* SwiftAssembly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAssembly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE56B01E01DF4000DA3575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35EE56B21E01DF4000DA3575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		35EE56BC1E01DF4000DA3575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35EE56C61E01DF7800DA3575 /* AdditionAssembly_ARM.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; path = AdditionAssembly_ARM.asm; sourceTree = "<group>"; };
 		35EE56C71E01DF7800DA3575 /* AdditionAssembly_x86.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; path = AdditionAssembly_x86.asm; sourceTree = "<group>"; };
-		35EE56C81E01DF7800DA3575 /* ObjC_Class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjC_Class.m; sourceTree = "<group>"; };
 		35EE56CC1E01DFCC00DA3575 /* SwiftAssembly-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftAssembly-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +42,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35EB7A311E032EEB00888C09 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				35EB7A331E032EFF00888C09 /* x86 64 */,
+				35EB7A321E032EF900888C09 /* ARM64 */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		35EB7A321E032EF900888C09 /* ARM64 */ = {
+			isa = PBXGroup;
+			children = (
+				35EE56C61E01DF7800DA3575 /* AdditionAssembly_ARM.asm */,
+			);
+			name = ARM64;
+			sourceTree = "<group>";
+		};
+		35EB7A331E032EFF00888C09 /* x86 64 */ = {
+			isa = PBXGroup;
+			children = (
+				35EE56C71E01DF7800DA3575 /* AdditionAssembly_x86.asm */,
+			);
+			name = "x86 64";
+			sourceTree = "<group>";
+		};
 		35EE56A41E01DF4000DA3575 = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +90,8 @@
 				35EE56B21E01DF4000DA3575 /* ViewController.swift */,
 				35EE56B41E01DF4000DA3575 /* Main.storyboard */,
 				35EE56B71E01DF4000DA3575 /* Assets.xcassets */,
-				35EE56C61E01DF7800DA3575 /* AdditionAssembly_ARM.asm */,
-				35EE56C71E01DF7800DA3575 /* AdditionAssembly_x86.asm */,
-				35EE56C81E01DF7800DA3575 /* ObjC_Class.m */,
+				35EB7A311E032EEB00888C09 /* Assembly */,
+				35EB7A2F1E032D2900888C09 /* AssemblyBridge.c */,
 				35EE56B91E01DF4000DA3575 /* LaunchScreen.storyboard */,
 				35EE56BC1E01DF4000DA3575 /* Info.plist */,
 				35EE56CC1E01DFCC00DA3575 /* SwiftAssembly-Bridging-Header.h */,
@@ -151,9 +175,9 @@
 			files = (
 				35EE56CA1E01DF7800DA3575 /* AdditionAssembly_x86.asm in Sources */,
 				35EE56B31E01DF4000DA3575 /* ViewController.swift in Sources */,
+				35EB7A301E032D2900888C09 /* AssemblyBridge.c in Sources */,
 				35EB7A2E1E01E50A00888C09 /* AdditionAssembly_ARM.asm in Sources */,
 				35EE56B11E01DF4000DA3575 /* AppDelegate.swift in Sources */,
-				35EE56CB1E01DF7800DA3575 /* ObjC_Class.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

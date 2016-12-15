@@ -1,5 +1,2 @@
-//
-//  Use this file to import your target's public headers that you would like to expose to Swift.
-//
-
-#import "ObjC_Class.m"
+//#import "AssemblyBridge.c"
+extern int addTwo(int a, int b);

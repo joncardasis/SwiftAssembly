@@ -4,15 +4,15 @@
 
 #if ARCH_ARM64
 
-//Take two QUADWORD sized variables
+//Take two QUADWORD (32bit) sized variables
 .align 4
 .global _addTwo
 _addTwo:
     sub sp, sp, #16
-    stp x1, x0, [sp] //do something with stack
-    ldp x1, x0, [sp]
+    stp x1, x0, [sp]
+    ldp x1, x0, [sp]     //load registers into stack
 
-    add x0, x0, x1
+    add x0, x0, x1       //add x0+x1 and store in x0
     add sp, sp, #16
     ret
 
