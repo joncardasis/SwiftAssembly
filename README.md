@@ -15,13 +15,13 @@ It means we can't run the same assembly code on our physical iOS device that we 
 ## Linking for proper architectures
 We need to tell [clang](http://clang.llvm.org/) that we only want to compile our ARM code when we build for devices and x86 code when we build for the simulator. The easiest way to do this is with preprocessor macros.
 
-###### Set the macros based on the sdk. 
+###### Set the macros based on the sdk.
 We'll have to do this for each build configuration.
-![Set Preprocessor Macros](Screenshots/Set Preprocessor Flags.png)
+![Set Preprocessor Macros](Screenshots/Set-Preprocessor-Flags.png)
 
 ###### Expose macros to Swift
 Now we need to expose these macros to the Swift compiler. Note that in order to expose the macro we prepend it with *-D*.
-![Swift Macros](Screenshots/Set Swift Flags.png)
+![Swift Macros](Screenshots/Set-Swift-Flags.png)
 
 
 
@@ -77,10 +77,3 @@ This exposes our assembly addTwo procedure and now we can call it in Swift! (Not
 ```Swift
 print("Assembly Say: \(addTwo(3,5))")
 ```
-
-
-
-
-
-
-
